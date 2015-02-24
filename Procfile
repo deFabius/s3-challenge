@@ -1,1 +1,1 @@
-web: node server.js
+web: MODE=dist node server.js
