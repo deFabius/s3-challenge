@@ -1,11 +1,10 @@
-/*DROP TYPE activity_type;
+
 CREATE TYPE activity_type AS ENUM ('Cycling', 'Running', 'Street Running', 'Treadmill Running', 'Other');
-DROP TYPE event_type;
+
 CREATE TYPE event_type AS ENUM ('Fitness', 'Race', 'Recreation', 'Training', 'Uncategorized');
 
-DROP TABLE activity;
 CREATE TABLE activity (
-	Activity_ID integer,
+	Activity_ID integer NOT NULL PRIMARY KEY,
 	Activity_Name varchar(255),
 	Description text,
 	Begin_Timestamp timestamp,
@@ -35,7 +34,7 @@ CREATE TABLE activity (
 	Elevation_Gain integer,
 	Elevation_Loss integer
 );
-*/
+
 
 INSERT INTO activity VALUES(394201096, 'Foxrock Village', 'With Ronan - Left knee gave a few niggles and was quite sore after I stopped...', 'Tue, 22 Oct 2013 12:39', 1382441942000, 'Tue, 22 Oct 2013 13:22', 1382444535000, 'Garmin Forerunner 610 2.80.0.0', 'Running', 'Uncategorized', '(GMT) Western European Time', 98.75, 532697413209826, -619931291788816, 532673575077206, -61979207675904, 5258806212911760, 161, 148, 28239015260431900, 4990429639953980, 2589551, 2581.0, 52725930389971300, 817993, 75, 98.75, 53.34, 53.44);
 INSERT INTO activity VALUES(392961429, 'Portrush - Portstewart - Coleraine (LSR)', 'Comfortable - wasn''t able to see/hear pace so running on perceived level. Left knee a little niggly at times. (Esp now I''ve stopped!!!)', 'Sun, 20 Oct 2013 11:41', 1382265692000, 'Sun, 20 Oct 2013 13:28', 1382272087000, 'Garmin Fit (iPhone) 1.6.0.0', 'Running', 'Uncategorized', '(GMT) Western European Time', 45.14, 551953361369669, -663948277942836, 551955100614578, -663911439478397, 4994221275362650, 0, 0, 40779709083046100, 1484957112376550, 6401523, 6385.0, 5002000774550300, 2130806, 0, 45.14, 147.07, 149.0);
